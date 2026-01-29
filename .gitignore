@@ -1,0 +1,23 @@
+# Зависимости (самое важное!)
+node_modules/
+
+# Логи
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Переменные окружения (секреты)
+.env
+.env.test
+.env.local
+
+# Папки сборки (если используете TypeScript/фреймворки)
+dist/
+build/
+
+# Кэш инструментов
+.npm
+.eslintcache
+.cache
