@@ -1,0 +1,8 @@
+{
+    "name": "puppeteer-pdf-service",
+    "type": "module",
+    "dependencies": {
+      "express": "^4.19.2",
+      "puppeteer": "^23.0.0"
+    }
+  }
