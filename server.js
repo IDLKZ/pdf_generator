@@ -9,7 +9,7 @@ app.post("/render", async (req, res) => {
   if (!html) return res.status(400).json({ error: "html is required" });
 
   const browser = await puppeteer.launch({
-    executablePath: "/snap/bin/chromium",
+    executablePath: "/usr/bin/google-chrome",
     headless: "new",
     args: ["--no-sandbox", "--disable-setuid-sandbox"]
   });
