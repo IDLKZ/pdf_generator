@@ -9,6 +9,7 @@ app.post("/render", async (req, res) => {
   if (!html) return res.status(400).json({ error: "html is required" });
 
   const browser = await puppeteer.launch({
+    executablePath: "/usr/bin/chromium",
     headless: "new",
     args: ["--no-sandbox", "--disable-setuid-sandbox"]
   });
@@ -23,7 +24,7 @@ app.post("/render", async (req, res) => {
       format: "A4",
       printBackground: true,
       preferCSSPageSize: true,
-      margin: { top: "8mm", right: "4mm", bottom: "8mm", left: "4mm" },
+      margin: { top: "16mm", right: "4mm", bottom: "12mm", left: "4mm" },
       ...(pdfOptions || {})
     });
 
